@@ -2,9 +2,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  /* NOTE: вариант внутри - наверно можно убрать кнопку редирект... */
   padding: 5%;
   color: #fff;
   opacity: 0.6;
+
+  /* NOTE: вариант снаружи */
+  /* width: 90%;
+  max-width: 1000px;
+  margin: 3rem auto;
+  text-align: center; */
 }
 
 .notFound__text {
@@ -13,11 +21,12 @@
 }
 
 .notFound__btn {
-  padding: 5px 10px;
+  padding: 10px 30px;
   border: 1px solid #fff;
   border-radius: 8px;
   cursor: pointer;
   color: inherit;
+  font-size: 20px;
   transition: 0.3s;
   text-decoration: none;
 }

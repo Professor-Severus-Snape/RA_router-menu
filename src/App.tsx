@@ -15,12 +15,16 @@ import TimeAttackPage from './pages/TimeAttackPage/TimeAttackPage';
 const App = () => {
   const routes = createBrowserRouter(
     createRoutesFromElements(
+      // TODO: выбрать какой вариант оставить - общую ошибку или ошибку внутри контейнера 'page'
+      // NOTE: 1-ый вариант - родительский элемент с ошибкой
+      // <Route path="/" element={<Layout />} errorElement={<NotFoundPage />}>
       <Route path="/" element={<Layout />}>
-        <Route index element={<HomePage />} /> {/* индексный маршрут - по дефолту */}
+        <Route index element={<HomePage />} />
         <Route path="drift" element={<DriftPage />} />
         <Route path="timeattack" element={<TimeAttackPage />} />
         <Route path="forza" element={<ForzaPage />} />
-        <Route path="*" element={<NotFoundPage />} /> {/* страница не найдена - редирект */}
+        {/*  NOTE: 2-ой вариант - страница не найдена - редирект */}
+        <Route path="*" element={<NotFoundPage />} />
       </Route>
     ),
     {
