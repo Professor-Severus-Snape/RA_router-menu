@@ -25,8 +25,8 @@ const App = () => {
       </Route>
     ),
     {
-      // добавляем 'basename', чтобы работала перезагрузка на GitHub Pages без createHashRouter():
-      basename: '/RA_router-menu/',
+      // добавляем 'basename' значение которого будет взято из конфига vite:
+      basename: import.meta.env.BASE_URL,
       // избавляет от множества warn в консоли:
       future: {
         v7_relativeSplatPath: true,
